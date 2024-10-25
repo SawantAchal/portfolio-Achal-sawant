@@ -22,8 +22,8 @@ const Project = () => {
 
   return (
     <>
-      <main className='bg-[#0F0715] pt-5'>
-        <h1 className='bg-gradient-to-r from-indigo-700 to-indigo-200 bg-clip-text text-transparent text-3xl text-center'>My Recent Works</h1>
+      <main className='bg-[#0F0715] pt-5 pb-8'>
+        <h1 className='bg-gradient-to-r from-[#8750f7] to-white bg-clip-text text-transparent text-5xl text-center'>My Recent Works</h1>
         <div className='flex justify-center items-center mt-7'>
           <div className="flex gap-5 mb-8 bg-black p-1 rounded-full items-center w-80 justify-center">
             <button onClick={() => handleFilterChange('all')} className={`p-2 ${filter === 'all' ? 'bg-gradient-to-r from-purple-400 to-indigo-900 rounded-full px-9 text-white' : 'text-white'}`}>All</button>
@@ -32,19 +32,19 @@ const Project = () => {
           </div>
         </div>
         <div className='flex justify-around'>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-32 w-full px-5 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:mt-32 w-full px-5 md:px-10">
             {
               filteredProjects.map((project) => (
-                <div key={project.id} className='relative group bg-fuchsia-800 w-[85%] h-96 mx-auto overflow-hidden'>
+                <div key={project.id} className='relative group bg-[#140c1c] lg:w-[85%] w-full h-96 mx-auto overflow-hidden'>
                   <img src={project.image} alt={project.title}  className='absolute bottom-0  h-[100%] w-full px-7 pt-7'  style={{ objectFit: 'cover' }} />
-                  <div className='absolute inset-0 bg-gradient-to-b from-transparent to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                    <div className='absolute bottom-3 left-3 right-3 rounded-xl p-6 bg-purple-700 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 '>
+                  <div className='absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                    <div className='absolute bottom-3 left-3 right-3 rounded-xl p-6 bg-gradient-to-r from-[#8750f7] to-[#2a1454] text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 '>
                       <div className='flex   items-center'>
                         <div>
-                          <h3 className='text-2xl font-bold'>{project.title}</h3>
-                          <p className='text-sm mt-2'>{project.description}</p>
+                          <h3 className='md:text-2xl text-sm font-bold'>{project.title}</h3>
+                          <p className='md:text-sm text-[8px] mt-2'>{project.description}</p>
                         </div>
-                        <div className=' text-3xl  transform group-hover:animate-circular'>↗</div>
+                        <div className=' lg:text-3xl text-xl  transform group-hover:animate-circular'>↗</div>
                       </div>
                     </div>
                   </div>
