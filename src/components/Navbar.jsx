@@ -1,7 +1,7 @@
 import React from 'react'
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection, refs }) => {
   return (
     <>
       <nav className='flex justify-around cursor-pointer items-center p-3 h-20 text-white'>
@@ -10,19 +10,19 @@ const Navbar = () => {
         </div>
         <div className='flex md:gap-16 items-center gap-6'>
           <ul className='md:flex lg:gap-8 gap-4 items-center hidden '>
-            <li className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
+            <li onClick={() => scrollToSection(refs.mainRef)} className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
               HOME
             </li>
-            <li className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
+            <li onClick={() => scrollToSection(refs.projectRef)} className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
               PROJECT
             </li>
-            <li className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
+            <li onClick={() => scrollToSection(refs.resumeRef)} className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
               RESUME
             </li>
-            <li className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
+            <li onClick={() => scrollToSection(refs.skillsRef)} className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
               SKILLS
             </li>
-            <li className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
+            <li onClick={() => scrollToSection(refs.contactRef)} className='relative pb-2 hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500'>
               CONTACT
             </li>
           </ul>

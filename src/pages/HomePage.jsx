@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Main from '../components/Main';
 
-const HomePage = () => {
+const HomePage = ({ scrollToSection, refs }) => {
   return (
     <>
         <main className="relative w-full h-screen bg-[#140c1c]">
@@ -15,8 +15,8 @@ const HomePage = () => {
                 </svg>
             </div>
             <div className="relative z-10">
-                <Navbar />
-                <Main/>
+                <Navbar scrollToSection={scrollToSection} refs={refs}/>
+                <Main />
             </div>
         </main>
     </>
