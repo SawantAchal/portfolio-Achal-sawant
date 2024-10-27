@@ -20,7 +20,7 @@ const Skills = () => {
 
   return (
     <>
-        <main className='bg-[#0F0715] py-10'>
+        <main className='bg-[#0F0715] py-10 md:pt-28'>
             <h1 className='text-3xl bg-gradient-to-r from-[#8750f7] to-white bg-clip-text text-transparent text-center mb-4'>My Skills</h1>
             <p className='text-white text-center mb-8'>
                 We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.
