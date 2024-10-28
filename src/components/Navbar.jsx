@@ -32,9 +32,9 @@ const Navbar = ({ scrollToSection, refs, activeSection }) => {
           <li onClick={() => { scrollToSection(refs.skillsRef); setIsOpen(false);}} className={`relative pb-2 ${activeSection === 'SKILLS' ? 'before:w-full' : 'hover:before:w-full'} before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500`}>SKILLS</li>
           <li onClick={() => { scrollToSection(refs.contactRef); setIsOpen(false);}} className={`relative pb-2 ${activeSection === 'CONTACT' ? 'before:w-full' : 'hover:before:w-full'} before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-purple-400 before:to-indigo-900 before:transition-all before:duration-500`}>CONTACT</li>
         </ul>
-        <button className={` text-white bg-gradient-to-r from-[#8750f7] to-[#2a1454] lg:p-3 p-2 rounded-full hover:bg-gradient-to-r hover:from-[#2a1454] hover:to-[#8750f7] md:w-40 w-24`}>
+        <a href='https://www.linkedin.com/in/achal-sawant-16853b210/' target='_blank' ><button className={` text-white bg-gradient-to-r from-[#8750f7] to-[#2a1454] lg:p-3 p-2 rounded-full hover:bg-gradient-to-r hover:from-[#2a1454] hover:to-[#8750f7] md:w-40 w-24`}>
           Hire me!
-        </button>
+        </button></a>
         <div className='md:hidden'>
           {
             isOpen ? (
