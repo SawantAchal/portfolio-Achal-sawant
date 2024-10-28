@@ -28,7 +28,7 @@ const HomePage = ({ scrollToSection, refs, activeSection }) => {
                 {/* SVG Background */}
                 <div className="absolute inset-0 z-0">
                     <svg width="100%" height="100%" className="absolute inset-0 hidden lg:block">
-                        <text x="50%" y="50%" textAnchor="middle" className="animate-stroke animate-zoom text-[15rem] fill-transparent stroke-[#2a1454] stroke-[2px]" style={{ dominantBaseline: 'middle', transformOrigin: 'center' }}>
+                        <text x="50%" y="50%" textAnchor="middle" className={`animate-stroke animate-zoom text-[15rem] fill-transparent ${theme === 'light' ? 'stroke-[#d7cfe7]' : 'stroke-[#2a1454]'} stroke-[2px]`} style={{ dominantBaseline: 'middle', transformOrigin: 'center' }}>
                             HI
                         </text>
                     </svg>
