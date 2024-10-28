@@ -6,6 +6,7 @@ import Project from './components/Project';
 import Resume from './components/Resume';
 import Skills from './components/Skills';
 import HomePage from './pages/HomePage';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   const mainRef = useRef(null);
@@ -50,12 +51,14 @@ function App() {
 
   return (
     <>
-      <HomePage scrollToSection={scrollToSection} refs={{ mainRef, projectRef, resumeRef, skillsRef, contactRef }} activeSection={activeSection}/>
-      <div ref={projectRef}><Project /></div>
-      <div ref={resumeRef}><Resume /></div>
-      <div ref={skillsRef}><Skills /></div>
-      <div ref={contactRef}><Contact /></div>
-      <Footer />
+      <ThemeProvider>
+        <HomePage scrollToSection={scrollToSection} refs={{ mainRef, projectRef, resumeRef, skillsRef, contactRef }} activeSection={activeSection}/>
+        <div ref={projectRef}><Project /></div>
+        <div ref={resumeRef}><Resume /></div>
+        <div ref={skillsRef}><Skills /></div>
+        <div ref={contactRef}><Contact /></div>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }

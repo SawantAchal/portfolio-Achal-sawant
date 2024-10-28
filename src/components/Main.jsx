@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import img from '../assets/img1.webp'
+import {ThemeContext} from '../context/ThemeContext'
 
 const Main = () => {
+    const {theme} = useContext(ThemeContext);
   return (
     <>
         <main className='flex flex-col-reverse md:flex-row justify-between items-center p-4 md:p-20 gap-10 md:gap-0 xl:m-12'>
             <div className='flex flex-col gap-5'>
                 <div className='text-center md:text-left'>
-                    <h3 className='text-white text-2xl md:text-3xl lg:text-5xl'>I am Achal</h3>
-                    <h1 className='text-3xl md:text-4xl lg:text-7xl bg-gradient-to-r from-[#8750f7] to-white bg-clip-text text-transparent'>
+                    <h3 className={`${theme === 'light' ? 'text-[#2a1454]' : 'text-white ' } text-2xl md:text-3xl lg:text-5xl`}>I am Achal</h3>
+                    <h1 className={`${theme === 'light' ? 'bg-gradient-to-r from-[#8750f7] to-[#2a1454] ' : 'bg-gradient-to-r from-[#8750f7] to-white'} text-3xl md:text-4xl lg:text-7xl  bg-clip-text text-transparent`}>
                         Web Developer +
                     </h1>
-                    <h1 className='text-3xl md:text-4xl lg:text-7xl bg-gradient-to-r from-[#8750f7] to-white bg-clip-text text-transparent'>
-                        UX Designer
+                    <h1 className={`${theme === 'light' ? 'bg-gradient-to-r from-[#8750f7] to-[#2a1454] ' : 'bg-gradient-to-r from-[#8750f7] to-white'} text-3xl md:text-4xl lg:text-7xl  bg-clip-text text-transparent`}>
+                        UI/UX Designer
                     </h1>
-                    <pre className='text-white text-[10px] md:text-sm pt-3'>
+                    <pre className={`${theme === 'light' ? 'text-[#140C1C]' : 'text-white ' } text-[10px] md:text-sm pt-3  `}>
                         I break down complex user experience problems to<br/>
                         create integrity-focussed solutions that connect <br/>
                         billions of people.
