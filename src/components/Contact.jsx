@@ -30,7 +30,7 @@ const Contact = () => {
                         </select>
                     </div>
                     <textarea placeholder='Message' rows={5} className={` ${theme === 'light' ? 'bg-white text-gray-400 ' : 'bg-[#050709] text-white'} w-full p-2  border border-gray-600 rounded-md`}/>
-                    <button className='bg-gradient-to-r from-[#8750f7] to-[#2a1454] p-3 rounded-full text-white w-36'>Send Message</button>
+                    <button className='bg-gradient-to-r from-[#8750f7] to-[#2a1454] hover:bg-gradient-to-r hover:from-[#2a1454] hover:to-[#8750f7] p-3 rounded-full text-white w-36'>Send Message</button>
                 </form>
             </div>
             <div className=' flex-1 flex flex-col gap-10 text-white justify-center px-8'>
