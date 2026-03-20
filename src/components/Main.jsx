@@ -26,7 +26,7 @@ const Main = () => {
                     </pre>
                 </div>
                 <div className='flex flex-col md:flex-row gap-5 items-center'>
-                    <button onClick={() => {window.open("https://drive.google.com/file/d/1TiTPLFMJpf9g6kVFX1ZvahIlChRDRou3/view?usp=sharing")}} className='w-48 flex justify-center items-center gap-3 border border-purple-500 text-[#8750f7] p-4 rounded-full hover:bg-[#8750f7] hover:text-white'>
+                    <button onClick={() => {window.open("https://drive.google.com/file/d/1tALLyeN_toubPYBMtrkQ8lavxEX22Ip7/view?usp=sharing")}} className='w-48 flex justify-center items-center gap-3 border border-purple-500 text-[#8750f7] p-4 rounded-full hover:bg-[#8750f7] hover:text-white'>
                         Download CV <MdOutlineFileDownload size={22}/>
                     </button>
                     <div className='flex gap-5'>
